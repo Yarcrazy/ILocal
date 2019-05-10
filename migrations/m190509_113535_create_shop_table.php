@@ -14,11 +14,11 @@ class m190509_113535_create_shop_table extends Migration
     {
         $this->createTable('{{%shop}}', [
             'shopId' => $this->primaryKey(),
-            'shopShortName' => $this->string()->notNull(),
+            'shopShortName' => $this->string(20)->notNull(),
             'shopFullName' => $this->string()->notNull(),
             'shopPhoto' => $this->string()->notNull(),
             'shopType' => "enum('food', 'child', 'sport', 'beauty', 'buy')",
-            'shopPhone' => $this->string()->notNull(),
+            'shopPhone' => $this->string(20)->notNull(),
             'shopWeb' => $this->string()->notNull(),
             'shopAddress' => $this->string()->notNull(),
             'shopCostMin' => $this->integer()->notNull(),
