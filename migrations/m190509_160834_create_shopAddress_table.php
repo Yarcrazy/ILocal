@@ -15,6 +15,7 @@ class m190509_160834_create_shopAddress_table extends Migration
         $this->createTable('{{%shopAddress}}', [
             'id' => $this->primaryKey(),
             'shopId' => $this->integer()->notNull(),
+            'city' => $this->string()->notNull(),
             'street' => $this->string()->notNull(),
             'houseNumber' => $this->string()->notNull(),
             'housing' => $this->integer(),
