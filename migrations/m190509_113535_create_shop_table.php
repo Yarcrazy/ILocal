@@ -17,7 +17,7 @@ class m190509_113535_create_shop_table extends Migration
             'shopShortName' => $this->string(20)->notNull(),
             'shopFullName' => $this->string()->notNull(),
             'shopPhoto' => $this->string()->notNull(),
-            'shopType' => "enum('food', 'child', 'sport', 'beauty', 'buy')",
+            'shopTypeId' => $this->integer()->notNull(),
             'shopPhone' => $this->string(20)->notNull(),
             'shopWeb' => $this->string()->notNull(),
             'shopAddress' => $this->string()->notNull(),
@@ -25,6 +25,7 @@ class m190509_113535_create_shop_table extends Migration
             'shopCostMax' => $this->integer()->notNull(),
             'shopMiddleCost' => "enum('1', '2', '3', '4', '5')",
             'shopAgregator' => $this->string()->notNull(),
+            'shopStatusId' => $this->integer()->notNull(),
         ]);
     }
 
