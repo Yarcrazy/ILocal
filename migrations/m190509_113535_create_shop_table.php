@@ -20,7 +20,6 @@ class m190509_113535_create_shop_table extends Migration
             'shopTypeId' => $this->integer()->notNull(),
             'shopPhone' => $this->string(20)->notNull(),
             'shopWeb' => $this->string()->notNull(),
-            'shopAddress' => $this->string()->notNull(),
             'shopCostMin' => $this->integer()->notNull(),
             'shopCostMax' => $this->integer()->notNull(),
             'shopMiddleCost' => "enum('1', '2', '3', '4', '5')",
