@@ -20,6 +20,8 @@ class m190509_160834_create_shopAddress_table extends Migration
             'houseNumber' => $this->string()->notNull(),
             'housing' => $this->integer(),
             'building' => $this->integer(),
+            'latitude' => $this->float(),
+            'longitude' => $this->float(),
         ]);
     }
 
