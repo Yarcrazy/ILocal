@@ -24,7 +24,7 @@ class m190509_113535_create_shop_table extends Migration
             'shopCostMax' => $this->integer()->notNull(),
             'shopMiddleCost' => "enum('1', '2', '3', '4', '5')",
             'shopAgregator' => $this->string()->notNull(),
-            'shopStatusId' => $this->integer()->notNull(),
+            'shopStatus' => $this->boolean()->defaultValue(1),
         ]);
     }
 

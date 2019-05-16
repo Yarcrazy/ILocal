@@ -12,7 +12,6 @@ class m190509_161201_create_foreign_keys extends Migration
      */
     public function safeUp()
     {
-        $this->addForeignKey('fx_shop_shopStatus', 'shop', ['shopStatusId'], 'shopStatus', ['id']);
         $this->addForeignKey('fx_shop_shopType', 'shop', ['shopTypeId'], 'shopType', ['id']);
         $this->addForeignKey('fx_shopAddress_shop', 'shopAddress', ['shopId'], 'shop', ['shopId']);
     }
@@ -22,7 +21,6 @@ class m190509_161201_create_foreign_keys extends Migration
      */
     public function safeDown()
     {
-        $this->dropForeignKey('fx_shop_shopStatus', 'shop');
         $this->dropForeignKey('fx_shop_shopType', 'shop');
         $this->dropForeignKey('fx_shopAddress_shop', 'shopAddress');
     }
