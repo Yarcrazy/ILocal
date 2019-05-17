@@ -58,6 +58,8 @@ $config = [
 //            'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
+                '<controller:(shop)>' => '<controller>/index',
+                '<controller:(shop)>/<action:(view|update|delete)>/<id:\d+>' => '<controller>/<action>',
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'api/shop'],
             ],
         ],
@@ -71,14 +73,14 @@ if (YII_ENV_DEV) {
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['*'],
     ];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['*'],
     ];
 }
 
